@@ -111,7 +111,7 @@ Still open:
 
 1. **Email delivery.** Needs a Resend API key added by the owner (see KALS_DIGITAL_DEPLOYMENT.md, section 6). Until then the form uses WhatsApp.
 2. **Location.** The old site said “Lagos, Nigeria”. The new site only says the company is rooted in Africa and works for businesses in Nigeria. Confirm before adding a city.
-3. **Founder.** The About page has an “About the founder” section (added 30 Oct 2026 at the owner’s request) with the owner’s own statement, refined, signed “Kaalim, Founder, Kal’s Digital”, and the owner’s portrait. The earlier line naming the founder as Malik Adelu was folded into this section, so the site now uses only the name Kaalim. Confirm if the full name should also appear.
+3. **Founder.** The About page has an “About the founder” section (added 30 Oct 2026 at the owner’s request) with the owner’s own statement, refined, signed “Malik Adelu (Kaalim), Founder, Kal’s Digital”, and the owner’s portrait. The owner asked for the full name to appear alongside Kaalim (30 Oct 2026); structured data lists Malik Adelu with Kaalim as the alternate name.
 4. **Privacy notice.** Written to match how the site works (no cookies or analytics, WhatsApp or email routes, rights under the Nigeria Data Protection Act 2023, retention “as long as needed”). It has not had a legal review.
 5. **Restaurant QR menu.** Described from the brochure only. No live restaurant project was found. Confirm the description and whether there is a real example to show.
 6. **Social channels.** Only Instagram @kals_digital is linked. The brochure also prints a Snapchat handle, which is not used.

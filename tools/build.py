@@ -55,7 +55,7 @@ def jsonld_home(site: dict) -> str:
                 "description": "A digitalization consultancy combining technology, design and systems thinking to improve how businesses present themselves, connect with customers and operate.",
                 "slogan": "We make businesses look better, feel smarter, and become easier to buy from.",
                 "sameAs": ["https://www.instagram.com/kals_digital/"],
-                "founder": {"@type": "Person", "name": "Kaalim", "jobTitle": "Founder", "url": origin + "/about/#founder"},
+                "founder": {"@type": "Person", "name": "Malik Adelu", "alternateName": "Kaalim", "jobTitle": "Founder", "url": origin + "/about/#founder"},
                 "contactPoint": [
                     {"@type": "ContactPoint", "contactType": "sales", "telephone": "+234-903-292-3267", "availableLanguage": "English"}
                 ],
