@@ -55,6 +55,7 @@ def jsonld_home(site: dict) -> str:
                 "description": "A digitalization consultancy combining technology, design and systems thinking to improve how businesses present themselves, connect with customers and operate.",
                 "slogan": "We make businesses look better, feel smarter, and become easier to buy from.",
                 "sameAs": ["https://www.instagram.com/kals_digital/"],
+                "founder": {"@type": "Person", "name": "Kaalim", "jobTitle": "Founder", "url": origin + "/about/#founder"},
                 "contactPoint": [
                     {"@type": "ContactPoint", "contactType": "sales", "telephone": "+234-903-292-3267", "availableLanguage": "English"}
                 ],
@@ -106,8 +107,11 @@ def render_head(site: dict, page: dict) -> str:
         '<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/KalsDigital_Favicon_olive_32.png">',
         '<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png">',
         '<link rel="manifest" href="/site.webmanifest">',
-        '<link rel="preload" href="/assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>',
-        '<link rel="preload" href="/assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>',
+        # Preload every face the pages use, so they arrive together and the page is laid out
+        # once rather than once per late font.
+        *[f'<link rel="preload" href="/assets/fonts/{f}.woff2" as="font" type="font/woff2" crossorigin>' for f in (
+            "instrument-serif-latin-400-normal", "instrument-serif-latin-400-italic", "dm-sans-latin-400-normal",
+            "dm-sans-latin-500-normal", "outfit-latin-600-normal", "dm-mono-latin-500-normal")],
         f'<link rel="stylesheet" href="{css}">',
         f'<script src="{js}" defer></script>',
     ]

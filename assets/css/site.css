@@ -5,15 +5,15 @@
    spacing values below come from those documents; do not add other hues.
    ========================================================================== */
 
-/* ---------- Fonts (self-hosted, SIL Open Font License; see assets/fonts/NOTICE.txt) ---------- */
+/* ---------- Fonts (self-hosted, SIL Open Font License; see assets/fonts/NOTICE.txt) ----------
+   DM Mono is loaded in Medium only, as the guidelines specify; any mono text resolves to 500.
+   Outfit Light is used only inside the logo artwork, which is an image. */
 
-@font-face { font-family: "Outfit"; font-style: normal; font-weight: 300; font-display: swap; src: url("/assets/fonts/outfit-latin-300-normal.woff2") format("woff2"); }
 @font-face { font-family: "Outfit"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/outfit-latin-600-normal.woff2") format("woff2"); }
 @font-face { font-family: "Instrument Serif"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/instrument-serif-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; font-display: swap; src: url("/assets/fonts/instrument-serif-latin-400-italic.woff2") format("woff2"); }
 @font-face { font-family: "DM Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/dm-sans-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "DM Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/dm-sans-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "DM Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/dm-mono-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "DM Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/dm-mono-latin-500-normal.woff2") format("woff2"); }
 
 /* ---------- Design tokens ---------- */
@@ -1054,9 +1054,10 @@ fieldset.field { border: 0; padding: 0; margin: 0; min-width: 0; }
 .reveal-armed[data-reveal-delay="3"] { transition-delay: 0.24s; }
 
 /* ---------- Rendering performance ----------
-   Sections after the first are laid out only when they come near the screen. */
+   The home page is long: its later sections are laid out only as they approach the screen.
+   Kept to the home page, where it measurably cut main-thread work. */
 
-main > section ~ section, main > div ~ section { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+.page-home > section ~ section { content-visibility: auto; contain-intrinsic-size: auto 1000px; }
 
 /* ---------- Touch and motion preferences ---------- */
 
@@ -1190,7 +1191,18 @@ main > section ~ section, main > div ~ section { content-visibility: auto; conta
 @media (min-width: 640px) { .k-parts { grid-template-columns: repeat(3, 1fr); } }
 .promise-list li { grid-template-columns: 48px 1fr; padding-block: var(--space-6); }
 .promise-list strong { display: block; font-family: var(--font-logo); font-weight: 600; font-size: var(--fs-heading-m); margin-bottom: var(--space-1); }
-.founder-line { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: baseline; padding-top: var(--space-6); border-top: 1px solid var(--kd-line); font-family: var(--font-logo); font-weight: 600; }
+.founder { display: grid; gap: var(--space-12) var(--grid-gap); align-items: center; }
+@media (min-width: 900px) { .founder { grid-template-columns: 5fr 7fr; } }
+.founder-photo { position: relative; isolation: isolate; margin: 0; max-width: 460px; width: 100%; }
+.founder-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+/* Kal’s Weave as an edge strip beside the portrait, never over it */
+.founder-photo::after { content: ""; position: absolute; top: var(--space-6); bottom: calc(-1 * var(--space-6)); right: calc(-1 * var(--space-6)); width: var(--space-6); background: var(--weave-tile) repeat-y center top / 100% auto; z-index: -1; }
+@media (max-width: 899px) { .founder-photo { margin-inline: auto; max-width: 400px; } .founder-photo::after { right: calc(-1 * var(--space-4)); width: var(--space-4); } }
+.founder-copy { display: grid; gap: var(--space-6); max-width: 60ch; }
+.founder-text { display: grid; gap: var(--space-4); }
+.founder-sign { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2) var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--kd-olive-light); }
+.founder-name { font-family: var(--font-logo); font-weight: 600; font-size: var(--fs-heading-l); }
+.founder-role { font-family: var(--font-mono); font-weight: 500; font-size: var(--fs-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--kd-ink-muted); }
 
 /* ---------- Contact ---------- */
 

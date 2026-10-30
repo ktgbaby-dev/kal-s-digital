@@ -12,7 +12,7 @@ Last updated 30 October 2026. This file is for the business owner and is not dep
 | KARD | `/products/kard/` | KARD: make every introduction count · Kal’s Digital |
 | Slotù | `/products/slotu/` | Slotù: portfolio and booking websites · Kal’s Digital |
 | Our work | `/work/` | Our work · Kal’s Digital |
-| About | `/about/` | About · Kal’s Digital |
+| About | `/about/` (founder section at `/about/#founder`) | About · Kal’s Digital |
 | Contact | `/contact/` | Start a project · Kal’s Digital |
 | Privacy | `/privacy/` | Privacy · Kal’s Digital |
 | Not found | `/404.html` | Page not found · Kal’s Digital (not indexed) |
@@ -72,7 +72,8 @@ Full-page previews are cropped above each site’s contact section and footer, s
 | Asset | Location | Status |
 |---|---|---|
 | Official logo SVGs, Woven K, Kente-fill K, Kal’s Weave tile, favicon, app icon | “Kal’s Digital” Design System artifact on claude.ai (asset store) | Used. The brand-kit zip named in the guidelines (Kals_Digital_Brand_Kit.zip) was **not found** on this computer; the same master files were taken from the artifact |
-| Brand fonts (8 WOFF2) | Same artifact | Used, self-hosted |
+| Brand fonts | Same artifact | Six faces used and self-hosted (Outfit Light and DM Mono Regular dropped: the logo artwork carries Outfit Light, and the guidelines set DM Mono in Medium) |
+| Founder portrait | Supplied by the owner on 30 Oct 2026 | Used on About as `assets/about/kaalim-founder-480/960.webp`; resized, metadata removed |
 | Ink colourway of Kal’s Weave as SVG | Not found (only a PNG swatch exists) | Not used; the olive tile is used everywhere |
 | Client site screenshots | Captured from the live sites, `assets/work/` | Used |
 | Slotù portal screenshots | Captured from getslotu.vercel.app (home, phone) | Used |
@@ -110,7 +111,7 @@ Still open:
 
 1. **Email delivery.** Needs a Resend API key added by the owner (see KALS_DIGITAL_DEPLOYMENT.md, section 6). Until then the form uses WhatsApp.
 2. **Location.** The old site said “Lagos, Nigeria”. The new site only says the company is rooted in Africa and works for businesses in Nigeria. Confirm before adding a city.
-3. **Founder.** The About page says only “Kal’s Digital was founded by Malik Adelu.” Add a short biography or photo only if you want one. The brand guidelines’ email signature names “Kaalim, CEO”; that name and title are not used.
+3. **Founder.** The About page has an “About the founder” section (added 30 Oct 2026 at the owner’s request) with the owner’s own statement, refined, signed “Kaalim, Founder, Kal’s Digital”, and the owner’s portrait. The earlier line naming the founder as Malik Adelu was folded into this section, so the site now uses only the name Kaalim. Confirm if the full name should also appear.
 4. **Privacy notice.** Written to match how the site works (no cookies or analytics, WhatsApp or email routes, rights under the Nigeria Data Protection Act 2023, retention “as long as needed”). It has not had a legal review.
 5. **Restaurant QR menu.** Described from the brochure only. No live restaurant project was found. Confirm the description and whether there is a real example to show.
 6. **Social channels.** Only Instagram @kals_digital is linked. The brochure also prints a Snapchat handle, which is not used.

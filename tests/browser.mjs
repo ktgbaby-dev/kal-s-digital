@@ -33,7 +33,8 @@ const browser = await chromium.launch({ executablePath: CHROME, headless: true }
 try {
   // 1. axe at desktop and phone, every page
   for (const [label, viewport, mobile] of [["desktop", { width: 1440, height: 900 }, false], ["phone", { width: 390, height: 844 }, true]]) {
-    const ctx = await browser.newContext({ viewport, isMobile: mobile, hasTouch: mobile, reducedMotion: "reduce" });
+    // bypassCSP lets axe be injected; the live site's policy (correctly) forbids inline scripts.
+    const ctx = await browser.newContext({ viewport, isMobile: mobile, hasTouch: mobile, reducedMotion: "reduce", bypassCSP: true });
     const page = await ctx.newPage();
     for (const p of PAGES) {
       const errors = [];

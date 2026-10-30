@@ -34,7 +34,8 @@ kals-digital/
 ├─ assets/
 │  ├─ css/site.css            Design tokens and all components
 │  ├─ js/site.js              Site behaviour
-│  ├─ fonts/                  8 WOFF2 files + NOTICE.txt (SIL OFL)
+│  ├─ fonts/                  6 WOFF2 files + NOTICE.txt (SIL OFL), all preloaded
+│  ├─ about/                  Founder portrait (WebP, 480 and 960 wide)
 │  ├─ brand/                  Official logo, Woven K, Kente-fill K, Kal’s Weave tile, icons
 │  ├─ work/                   Portfolio screenshots (WebP)
 │  └─ og/                     Social-sharing images (1200×630)
@@ -65,7 +66,7 @@ kals-digital/
 | `/products/kard/` | KARD product page | Hero with card → scan → page → next step → the problem → three variants (standard KARD, KARD websites with live examples, restaurant QR menu) → how a KARD comes together → FAQ → call to action |
 | `/products/slotu/` | Slotù product page | Hero with portal and booking screenshots, “Explore Slotù” to getslotu.vercel.app → who it is for → the problem → how booking works → owner desk → why Slotù, with the GLAM BY OYIN booking page → call to action to the portal |
 | `/work/` | Portfolio | Five projects, each with a scrollable full-page preview, phone view, what we built, visual direction and live links |
-| `/about/` | Philosophy and identity | Point of view and founder → design, technology, customer experience → the Woven K → personality → promises → call to action |
+| `/about/` | Philosophy, founder and identity | Point of view → About the founder (portrait and statement) → design, technology, customer experience → the Woven K → personality → promises → call to action |
 | `/contact/` | Start a conversation | Form, direct contacts, Slotù project-start link, what happens next |
 | `/privacy/` | Privacy notice | What is and isn’t collected; form routes; rights |
 
@@ -92,6 +93,7 @@ Tokens in `:root` of `site.css`:
 - **Spacing**: `--space-1` (4) to `--space-32` (128), section padding `--section-y`.
 - **Layout**: 12-column grid (`.grid`, `.col-*`, `.start-*`), container 1280 px with `clamp(16px, 5vw, 64px)` gutters.
 - **Radius**: 0 for panels, bands and logo tiles; 2 px inputs; 6 px cards, buttons and mockups; pill for chips only.
+- **Rendering**: the home page’s later sections use `content-visibility: auto` (home only; it cut main-thread work there, and on shorter pages it confused automated contrast checks without a real gain). All six font faces are preloaded so the page is laid out once rather than once per late font.
 - **Motion**: `--dur-fast/base/slow`, `--ease-out`. Reveal-on-scroll only hides content after the observer reports it is below the fold, so nothing can get stuck hidden; `prefers-reduced-motion` turns all motion off.
 - **Breakpoints**: 480, 640, 768, 1024, 1100 (navigation), 1280.
 
