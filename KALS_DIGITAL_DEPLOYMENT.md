@@ -82,7 +82,9 @@ That URL is protected by Vercel Authentication (you sign in with the Vercel acco
 
 ## 6. Environment variables
 
-None are needed for the site to work. To switch the contact form from WhatsApp to email, add these to the `kal-s-digital` project (Production; add them to Preview too if you want to test there), then redeploy:
+None are needed for the site to work. To switch the contact form from WhatsApp to email, these must be set on the `kal-s-digital` project (Production; Preview too if you want to test there), followed by a redeploy.
+
+State on 30 October 2026: `CONTACT_TO_EMAIL` is set (Production and Preview) to the owner’s personal inbox, chosen until kalsdigital.com is renewed. `RESEND_API_KEY` is **not set**, so the form still uses WhatsApp.
 
 | Variable | Value |
 |---|---|
@@ -90,7 +92,14 @@ None are needed for the site to work. To switch the contact form from WhatsApp t
 | `CONTACT_TO_EMAIL` | The inbox that should receive enquiries |
 | `CONTACT_FROM_EMAIL` | Optional. A sender on a domain verified in Resend. Until a domain is verified, leave it out: the default test sender can only deliver to the email address that owns the Resend account, so `CONTACT_TO_EMAIL` must be that address |
 
-Check it: `https://<deployment>/api/contact` should return `{"email":true}`. Then send one real test enquiry and confirm it arrives before relying on it.
+To finish the email route:
+
+1. Sign in to Resend (resend.com) with the same email address as `CONTACT_TO_EMAIL`. Until a domain is verified, Resend’s test sender only delivers to the address that owns the Resend account.
+2. Create an API key named for this website (sending access only).
+3. In Vercel, open `kal-s-digital` → Settings → Environment Variables, add `RESEND_API_KEY` as a sensitive variable for Production, and redeploy.
+4. Check that `https://kal-s-digital.vercel.app/api/contact` returns `{"email":true}`, then send one real test enquiry and confirm it arrives before relying on it.
+
+When kalsdigital.com is renewed and has mail, change `CONTACT_TO_EMAIL`, verify the domain in Resend and set `CONTACT_FROM_EMAIL` to an address on it.
 
 ## 7. Custom domain (not done; needs your approval)
 
@@ -107,9 +116,9 @@ When you decide to launch on it:
 
 | Item | Status |
 |---|---|
-| Your approval to deploy to production | **Required** |
-| Client permission to feature the five portfolio projects | **Not confirmed** (see KALS_DIGITAL_CONTENT_AND_PORTFOLIO.md) |
-| Vercel plan | The team is on the Hobby plan, which Vercel limits to non-commercial use. A commercial company site should move to Pro (already planned in your Slotù notes) |
-| Enquiry inbox | Not chosen. Until it is, the form sends visitors to WhatsApp, which works today |
-| Custom domain | Not attached, by design. The site works on kal-s-digital.vercel.app |
+| Approval to deploy to production | Given by the owner on 30 October 2026 |
+| Client permission to feature the five portfolio projects | Granted for all five (owner, 30 October 2026) |
+| Vercel plan | Stays on Hobby until the first real paying client (owner’s decision). Vercel limits Hobby to non-commercial use, so move to Pro then |
+| Enquiry inbox | Chosen and set as `CONTACT_TO_EMAIL`; email delivery waits for `RESEND_API_KEY`. WhatsApp works meanwhile |
+| Custom domain | Not attached. The owner will connect kalsdigital.com after renewing it (section 7) |
 | Privacy notice | Written; not legally reviewed |

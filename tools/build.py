@@ -59,7 +59,9 @@ def jsonld_home(site: dict) -> str:
                     {"@type": "ContactPoint", "contactType": "sales", "telephone": "+234-903-292-3267", "availableLanguage": "English"}
                 ],
                 "makesOffer": [
-                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KARD", "url": origin + "/products/kard/"}},
+                    {"@type": "Offer", "name": "KARD Pack", "price": "170000", "priceCurrency": "NGN", "url": origin + "/products/kard/",
+                     "description": "100 printed cards, a custom landing page and a professional email address",
+                     "itemOffered": {"@type": "Service", "name": "KARD"}},
                     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Slotù", "url": "https://getslotu.vercel.app/"}},
                 ],
             },

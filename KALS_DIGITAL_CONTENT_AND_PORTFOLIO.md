@@ -35,11 +35,13 @@ Nothing on the site invents a statistic, testimonial, award, client result, pric
 
 **KARD** (“Make every introduction count.”): a connected physical and digital presence. Three variants:
 
-1. *Professional and business KARD*: professionally designed printed cards, a QR code that opens a custom landing page, and a professional email on the client’s own domain “subject to domain and email setup”.
+1. *Professional and business KARD*: 100 professionally designed printed cards, a QR code that opens a custom landing page, and a professional email on the client’s own domain “subject to domain and email setup”.
 2. *KARD websites*: tailored websites built around each client’s identity, with four live examples (Vistosa The Brand, Forge Visuelle, ENLUX, GLAM BY OYIN).
 3. *KARD restaurant QR menu*: a QR code at the table opens a menu designed around the restaurant’s identity. The page states that online ordering, payments and other advanced features are not part of the standard QR menu.
 
-No KARD price, package name, quantity, turnaround or holder specification is published. The FAQ says pricing depends on the variant and is quoted before work starts.
+**Price (approved by the owner on 30 Oct 2026, from the corporate brochure):** KARD Pack ₦170,000 for 100 printed cards, a custom landing page and a professional email. It appears in the KARD hero, the standard-KARD price card, the KARD FAQ, the products overview, the home page KARD panel and the home page structured data (`Offer`, 170000 NGN). KARD websites and restaurant QR menus are described as quoted on scope. No turnaround or holder specification is published.
+
+The ₦ sign is not in any of the brand font files (including Outfit), so browsers draw that one character in the system font.
 
 **Slotù** (“Show your work. Fill your calendar.”): portfolio and booking websites for appointment-based professionals. Published capabilities, all verified on the live portal and on GLAM BY OYIN: portfolio by category with photos and video; services with prices and durations; only free times offered and no double booking; booking codes; deposits by bank transfer with receipt upload; owner confirms in a private owner desk; unpaid holds release automatically; separate logins; owner edits services, prices and hours; booking emails to the owner “set up and tested with a real email before we say it works”; automated pre-launch checks. The page states plainly that card payments and automatic confirmation are not part of Slotù today. The main call to action is “Explore Slotù” to https://getslotu.vercel.app/. Slotù pricing and the intake form are not duplicated.
 
@@ -80,27 +82,35 @@ Full-page previews are cropped above each site’s contact section and footer, s
 | Older Kal’s Digital graphics (Documents/kal’s/) | Pre-guidelines identity | Not used; superseded by the official identity |
 | KARD Radar, God’s Eye, kals-pipeline | Internal tools | Not mentioned or shown anywhere on the site |
 
-## 7. Projects needing permission before public launch
+## 7. Client permissions
 
-Permission to feature the work publicly was **not found in writing for any project**. All five are included because they are already public websites built by Kal’s Digital, but please confirm each before the site goes live:
+The owner confirmed on 30 October 2026 that permission is granted for all five projects.
 
 | Project | Permission status | Notes |
 |---|---|---|
-| GLAM BY OYIN | Not confirmed | The site also says its booking system “became the foundation of Slotù”. The Slotù report lists a GLAM BY OYIN case study as “needs the client’s permission” |
-| ENLUX | Not confirmed | |
-| Forge Visuelle | Not confirmed | The client’s founder is not named on this site |
-| Vistosa The Brand | Not confirmed | |
-| KTG MUSIC | Not confirmed | Project notes describe it as a music artist’s own site |
+| GLAM BY OYIN | Granted (owner, 30 Oct 2026) | Includes the line that its booking system “became the foundation of Slotù” |
+| ENLUX | Granted (owner, 30 Oct 2026) | |
+| Forge Visuelle | Granted (owner, 30 Oct 2026) | The client’s founder is not named on this site |
+| Vistosa The Brand | Granted (owner, 30 Oct 2026) | |
+| KTG MUSIC | Granted (owner, 30 Oct 2026) | |
 
 To remove a project, delete its block from `work/index.html` (and its card on the home page and KARD page), then run `python tools/build.py` and `python tools/check_site.py`.
 
-## 8. Facts that still need the business owner’s confirmation
+## 8. Decisions and open points
 
-1. **Client permissions** above.
-2. **Enquiry email address.** No email address is published. The old site’s `connect@kalsdigital.com` was removed because kalsdigital.com has no mail records. Decide which inbox should receive website enquiries.
-3. **KARD pricing.** The corporate brochure (27 Oct 2026) lists a “KARD Pack” at ₦170,000 for 100 printed cards, a custom landing page and a professional email. It is not published because your brief says pricing is not established. Confirm whether to show it.
-4. **Location.** The old site said “Lagos, Nigeria”. The new site only says the company is rooted in Africa and works for businesses in Nigeria. Confirm before adding a city.
-5. **Founder.** The About page says only “Kal’s Digital was founded by Malik Adelu.” Add a short biography or photo only if you want one. The brand guidelines’ email signature names “Kaalim, CEO”; that name and title are not used.
-6. **Privacy notice.** Written to match how the site works (no cookies or analytics, WhatsApp or email routes, rights under the Nigeria Data Protection Act 2023, retention “as long as needed”). It has not had a legal review.
-7. **Restaurant QR menu.** Described from the brochure only. No live restaurant project was found. Confirm the description and whether there is a real example to show.
-8. **Social channels.** Only Instagram @kals_digital is linked. The brochure also prints a Snapchat handle, which is not used.
+Decided by the owner on 30 October 2026:
+
+- **Client permissions:** granted for all five projects.
+- **Enquiry inbox:** the owner’s personal inbox, until kalsdigital.com is renewed. It is stored only as `CONTACT_TO_EMAIL` on the Vercel project and is not printed on the site or in this repository. The old `connect@kalsdigital.com` stays removed.
+- **KARD price:** publish ₦170,000 (done).
+- **Vercel plan:** stay on Hobby until the first real paying client.
+- **Launch:** approved; the custom domain will be connected after renewal.
+
+Still open:
+
+1. **Email delivery.** Needs a Resend API key added by the owner (see KALS_DIGITAL_DEPLOYMENT.md, section 6). Until then the form uses WhatsApp.
+2. **Location.** The old site said “Lagos, Nigeria”. The new site only says the company is rooted in Africa and works for businesses in Nigeria. Confirm before adding a city.
+3. **Founder.** The About page says only “Kal’s Digital was founded by Malik Adelu.” Add a short biography or photo only if you want one. The brand guidelines’ email signature names “Kaalim, CEO”; that name and title are not used.
+4. **Privacy notice.** Written to match how the site works (no cookies or analytics, WhatsApp or email routes, rights under the Nigeria Data Protection Act 2023, retention “as long as needed”). It has not had a legal review.
+5. **Restaurant QR menu.** Described from the brochure only. No live restaurant project was found. Confirm the description and whether there is a real example to show.
+6. **Social channels.** Only Instagram @kals_digital is linked. The brochure also prints a Snapchat handle, which is not used.

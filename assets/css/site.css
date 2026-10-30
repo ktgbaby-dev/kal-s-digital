@@ -1148,6 +1148,11 @@ main > section ~ section, main > div ~ section { content-visibility: auto; conta
 @media (min-width: 1024px) { .variant-body { grid-template-columns: 1fr 1fr; } }
 .mini-head { font-family: var(--font-mono); font-weight: 500; font-size: var(--fs-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--kd-ink-muted); margin-bottom: var(--space-4); }
 .variant .note { max-width: 80ch; }
+.price-card { display: grid; gap: var(--space-4) var(--space-8); align-items: center; padding: var(--space-6); background: var(--kd-olive-mist); border-left: 3px solid var(--kd-olive); }
+@media (min-width: 900px) { .price-card { grid-template-columns: auto 1fr auto; } }
+.price-card .label { color: var(--kd-ink-muted); }
+.price { font-family: var(--font-logo); font-weight: 600; font-size: clamp(2rem, 1.6rem + 1.4vw, 2.75rem); line-height: 1; letter-spacing: -0.01em; color: var(--kd-ink); margin-top: var(--space-2); }
+.price-card-text { max-width: 46ch; }
 
 .kard-sites { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-12) var(--grid-gap); }
 @media (min-width: 900px) { .kard-sites { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
