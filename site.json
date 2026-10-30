@@ -1,0 +1,85 @@
+{
+  "origin": "https://kal-s-digital.vercel.app",
+  "site_name": "Kal’s Digital",
+  "locale": "en_NG",
+  "default_image": "/assets/og/og-default.png",
+  "default_image_alt": "Kal’s Digital: we make businesses look better, feel smarter, and become easier to buy from.",
+  "pages": [
+    {
+      "file": "index.html",
+      "path": "/",
+      "nav": "home",
+      "title": "Kal’s Digital · Digitalization consultancy",
+      "description": "Kal’s Digital is a digitalization consultancy. We combine technology, design and systems thinking to help businesses look better, feel smarter and become easier to buy from.",
+      "jsonld": "home"
+    },
+    {
+      "file": "what-we-do/index.html",
+      "path": "/what-we-do/",
+      "nav": "what-we-do",
+      "title": "What we do · Kal’s Digital",
+      "description": "Websites, brand identity, social media, SEO, content and practical digital systems, scoped around the problem your business actually needs solved."
+    },
+    {
+      "file": "products/index.html",
+      "path": "/products/",
+      "nav": "products",
+      "title": "Products: KARD and Slotù · Kal’s Digital",
+      "description": "KARD connects a physical introduction to a digital presence. Slotù gives appointment-based professionals a portfolio and booking website. Two products from Kal’s Digital."
+    },
+    {
+      "file": "products/kard/index.html",
+      "path": "/products/kard/",
+      "nav": "products",
+      "title": "KARD: make every introduction count · Kal’s Digital",
+      "description": "KARD by Kal’s Digital: printed business cards with a QR code that opens a landing page built for your business, a professional email on your own domain, tailored websites and restaurant QR menus.",
+      "image": "/assets/og/og-kard.png",
+      "image_alt": "KARD by Kal’s Digital: make every introduction count."
+    },
+    {
+      "file": "products/slotu/index.html",
+      "path": "/products/slotu/",
+      "nav": "products",
+      "title": "Slotù: portfolio and booking websites · Kal’s Digital",
+      "description": "Slotù by Kal’s Digital gives makeup artists, barbers, stylists and other appointment-based professionals a branded portfolio and booking website with deposits and a private owner desk.",
+      "image": "/assets/og/og-slotu.png",
+      "image_alt": "Slotù by Kal’s Digital: show your work, fill your calendar."
+    },
+    {
+      "file": "work/index.html",
+      "path": "/work/",
+      "nav": "work",
+      "title": "Our work · Kal’s Digital",
+      "description": "Websites designed and built by Kal’s Digital for GLAM BY OYIN, ENLUX, Forge Visuelle, Vistosa The Brand and KTG MUSIC, each in its client’s own identity."
+    },
+    {
+      "file": "about/index.html",
+      "path": "/about/",
+      "nav": "about",
+      "title": "About · Kal’s Digital",
+      "description": "Kal’s Digital is a digitalization consultancy rooted in Africa. We believe technology should earn its place, and we design and build around how a business actually works."
+    },
+    {
+      "file": "contact/index.html",
+      "path": "/contact/",
+      "nav": "contact",
+      "title": "Start a project · Kal’s Digital",
+      "description": "Tell Kal’s Digital about your business and what you would like to change. Reach us through the project form, on WhatsApp on 0808 881 2532, or by phone on 0903 292 3267."
+    },
+    {
+      "file": "privacy/index.html",
+      "path": "/privacy/",
+      "nav": "",
+      "title": "Privacy · Kal’s Digital",
+      "description": "How the Kal’s Digital website handles the information you send us through the project form, and what it does not collect."
+    },
+    {
+      "file": "404.html",
+      "path": "/404.html",
+      "nav": "",
+      "noindex": true,
+      "title": "Page not found · Kal’s Digital",
+      "description": "This page does not exist on the Kal’s Digital website. Find what we do, our products, our work, or how to start a project."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Source and tooling that must not be served publicly
+tools/
+tests/
+partials/
+site.json
+*.md
+.gitignore
+.vercelignore

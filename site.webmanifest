@@ -1,0 +1,13 @@
+{
+  "name": "Kal’s Digital",
+  "short_name": "Kal’s Digital",
+  "description": "A digitalization consultancy. We make businesses look better, feel smarter, and become easier to buy from.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F6F5EF",
+  "theme_color": "#55692D",
+  "icons": [
+    { "src": "/assets/brand/KalsDigital_AppIcon_olive_192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/brand/KalsDigital_AppIcon_olive_512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

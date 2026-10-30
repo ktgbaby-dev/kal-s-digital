@@ -1,0 +1,13 @@
+Fonts used by the Kal’s Digital website
+
+These WOFF2 files are the Latin subsets supplied with the Kal’s Digital brand
+system (the "Kal’s Digital" design-system kit, October 2026). All four families
+are free Google Fonts released under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org
+
+  Outfit            outfit-latin-300-normal.woff2, outfit-latin-600-normal.woff2
+  Instrument Serif  instrument-serif-latin-400-normal.woff2, instrument-serif-latin-400-italic.woff2
+  DM Sans           dm-sans-latin-400-normal.woff2, dm-sans-latin-500-normal.woff2
+  DM Mono           dm-mono-latin-400-normal.woff2, dm-mono-latin-500-normal.woff2
+
+Each font remains the property of its designers and is used under the OFL.

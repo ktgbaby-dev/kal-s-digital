@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="2048" height="2048"><g transform="translate(0.0 0.0) scale(1.0)"><defs>
+<clipPath id="cliolive"><rect x="0" y="210" width="512" height="300"></rect></clipPath>
+<clipPath id="ciolive"><rect x="226.0" y="96" width="420" height="320"></rect></clipPath>
+<mask id="mUiolive" maskUnits="userSpaceOnUse" x="-50" y="-50" width="612" height="612"><rect x="-50" y="-50" width="612" height="612" fill="#fff"></rect><rect x="118.0" y="84" width="108" height="344" fill="#000"></rect></mask>
+<mask id="mLiolive" maskUnits="userSpaceOnUse" x="-50" y="-50" width="612" height="612"><rect x="-50" y="-50" width="612" height="612" fill="#fff"></rect><g clip-path="url(#ciolive)"><line x1="521.2" y1="-154.7" x2="-49.2" y2="666.7" stroke="#000" stroke-width="108"></line></g><rect x="118.0" y="84" width="108" height="344" fill="#000"></rect></mask>
+<mask id="mSiolive" maskUnits="userSpaceOnUse" x="-50" y="-50" width="612" height="612"><rect x="-50" y="-50" width="612" height="612" fill="#fff"></rect><g clip-path="url(#ciolive)"><line x1="521.2" y1="666.7" x2="-49.2" y2="-154.7" stroke="#000" stroke-width="108"></line></g></mask>
+<mask id="mTiolive" maskUnits="userSpaceOnUse" x="-50" y="-50" width="612" height="612"><rect x="-50" y="-50" width="612" height="612" fill="#fff"></rect></mask>
+</defs>
+<g transform="translate(-8.1 0)">
+<g mask="url(#mTiolive)"><rect x="130.0" y="96" width="84" height="320" fill="#55692D"></rect></g>
+<g clip-path="url(#ciolive)"><g mask="url(#mUiolive)"><line x1="521.2" y1="-154.7" x2="-49.2" y2="666.7" stroke="#55692D" stroke-width="84"></line></g></g>
+<g clip-path="url(#ciolive)"><g clip-path="url(#cliolive)"><g mask="url(#mLiolive)"><line x1="521.2" y1="666.7" x2="-49.2" y2="-154.7" stroke="#55692D" stroke-width="84"></line></g></g></g>
+<path fill-rule="evenodd" fill="#55692D" d="M346 228l28 28-28 28-28-28z M346 239.3l16.7 16.7-16.7 16.7-16.7-16.7z"></path><path d="M346 246l10 10-10 10-10-10z" fill="#55692D"></path>
+</g></g></svg>

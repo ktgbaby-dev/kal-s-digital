@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- Source for the 1200x630 social-sharing images. Rendered by tools/og/render.mjs
+     against the local preview server: og.html?v=default | kard | slotu -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  .og { position: relative; width: 1200px; height: 630px; display: grid; grid-template-columns: 1fr 360px; gap: 48px; padding: 56px 64px 0; box-sizing: border-box; }
+  .og .copy { display: flex; flex-direction: column; }
+  .og .logo { width: 260px; height: auto; margin: -18px 0 0 -18px; }
+  .og h1 { font-family: var(--font-display); font-weight: 400; font-size: 64px; line-height: 1.02; letter-spacing: -0.01em; margin-top: 40px; }
+  .og h1 em { font-style: italic; }
+  .og .tag { margin-top: auto; margin-bottom: 128px; font-family: var(--font-mono); font-weight: 500; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; }
+  .og .tile { width: 360px; height: 360px; display: grid; place-items: center; margin-top: 20px; }
+  .og .tile img { width: 92%; }
+  .og .band { position: absolute; left: 0; right: 0; bottom: 0; height: 96px; background: var(--weave-tile) repeat-x left center / auto 100%; }
+  .v-default { background: #F6F5EF; color: #1B2210; }
+  .v-default h1 em { color: #55692D; }
+  .v-default .tag { color: #55692D; }
+  .v-default .tile { background: #FFFFFF; }
+  .v-kard { background: #1B2210; color: #F6F5EF; }
+  .v-kard h1 em { color: #A9BB83; }
+  .v-kard .tag { color: #A9BB83; }
+  .v-kard .name { font-family: var(--font-logo); font-weight: 600; font-size: 132px; line-height: 0.9; letter-spacing: 0.02em; color: #FFFFFF; }
+  .v-slotu { background: #55692D; color: #FFFFFF; }
+  .v-slotu h1 em { color: #DDE1D5; }
+  .v-slotu .tag { color: #DDE1D5; }
+  .v-slotu .name { font-family: var(--font-logo); font-weight: 600; font-size: 132px; line-height: 0.9; letter-spacing: -0.03em; color: #FFFFFF; }
+  .side { display: flex; flex-direction: column; justify-content: center; padding-bottom: 120px; }
+</style>
+</head>
+<body>
+<div class="og" id="og"></div>
+<script>
+  var v = new URLSearchParams(location.search).get("v") || "default";
+  var el = document.getElementById("og");
+  el.className = "og v-" + v;
+  if (v === "kard") {
+    el.innerHTML =
+      '<div class="copy"><img class="logo" src="/assets/brand/KalsDigital_Logo_Horizontal_white-on-ink.svg" alt="">' +
+      '<h1>Make every introduction <em>count.</em></h1>' +
+      '<p class="tag">Card · QR code · Landing page · Professional email</p></div>' +
+      '<div class="side"><p class="name">KARD</p></div><div class="band"></div>';
+  } else if (v === "slotu") {
+    el.innerHTML =
+      '<div class="copy"><img class="logo" src="/assets/brand/KalsDigital_Logo_Horizontal_white-on-olive.svg" alt="">' +
+      '<h1>Show your work. Fill your <em>calendar.</em></h1>' +
+      '<p class="tag">Portfolio and booking websites</p></div>' +
+      '<div class="side"><p class="name">slotù</p></div><div class="band"></div>';
+  } else {
+    el.innerHTML =
+      '<div class="copy"><img class="logo" src="/assets/brand/KalsDigital_Logo_Horizontal_olive-on-light.svg" alt="">' +
+      '<h1>We make businesses look better, feel smarter, and become <em>easier to buy from.</em></h1>' +
+      '<p class="tag">Digitalization consultancy</p></div>' +
+      '<div><div class="tile"><img src="/assets/brand/KalsDigital_K_kente-fill.svg" alt=""></div></div><div class="band"></div>';
+  }
+</script>
+</body>
+</html>
